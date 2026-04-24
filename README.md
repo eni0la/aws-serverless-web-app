@@ -5,20 +5,21 @@ Deploying a Serverless Web Application on AWS using S3, Lambda, API Gateway, Dyn
 Overview
 
 
+This project demonstrates how to build and deploy a serverless web application using AWS services. It shows how a static frontend website connects to a backend system without managing servers.
 
-This project demonstrates how to build and deploy a serverless static web app using:
+The application allows users to add and retrieve student data, with all processing handled in the cloud.
 
 
 
 Amazon S3 – Static website hosting
 
-AWS Lambda – Backend logic (GET \& POST functions)
+AWS Lambda – Backend logic (GET & POST functions)
 
-Amazon API Gateway – API routing
+Amazon API Gateway – API routing 
 
 Amazon DynamoDB – NoSQL database
 
-Amazon CloudFront – Content delivery network for performance
+Amazon CloudFront – Content delivery network for improved performance
 
 
 
@@ -98,13 +99,13 @@ POST /students → Add new student
 
 5\. CORS(Cross Origin Resource Sharing) Configuration
 
-To allow frontend communication with backend:
+To allow frontend communication between frontend and backend:
 
 
 
 Enabled CORS in API Gateway
 
-Allowed:
+Allowed methods:
 
 GET
 
@@ -112,13 +113,15 @@ POST
 
 OPTIONS
 
-Fixed cross-origin request errors between frontend and API
+This resolved cross-origin request errors between the frontend and API.
 
 
 
-6\. Deployed API to a new stage: prod
+6\. The API was deployed to a new stage:
 
-Tested endpoints successfully after deployment
+prod
+
+After deployment, all endpoints were successfully tested.
 
 
 
@@ -188,7 +191,7 @@ CHALLENGES \& TROUBLESHOOTING
 
 
 
-✔ Fixed by correcting region configuration in Lambda
+✔ Fixed by correcting region configuration in Lambda function
 
 
 
